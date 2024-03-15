@@ -1,5 +1,8 @@
 apiVersion: backstage.io/v1alpha1
-catalog:
-  locations:
-    - type: url
-      target: https://github.com/jesuino/my-software-templates/blob/main/jfrog-test.yaml
+kind: Location
+metadata:
+  name: test-components
+  description: My test components
+spec:
+  targets:
+      - ./jfrog-test.yaml
