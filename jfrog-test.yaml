@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-jfrog
+  description: A test
+  annotations:
+    'jfrog-artifactory/image-name': 'test-image'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-test
