@@ -1,4 +1,4 @@
 catalog:
   locations:
     - type: url
-      target: TBD
+      target: https://github.com/jesuino/my-software-templates/blob/main/jfrog-test.yaml
