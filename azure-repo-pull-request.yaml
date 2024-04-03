@@ -1,0 +1,50 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: azure-repo-demo-pr
+  title: Azure Repository Test - PR
+  description: Creates a PR as test
+spec:
+  owner: parfuemerie-douglas
+  type: service
+
+  parameters:
+    - title: Fill in some steps
+      required:        
+        - owner
+      properties:
+        owner:
+          title: Owner
+          type: string
+          description: Select an owner for the Backstage component.
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+
+  steps:
+    - id: pullRequestAzureRepo
+      name: Create a Pull Request to Azure Repo
+      action: azure:repo:pr
+      input:
+        sourceBranch: "test"
+        targetBranch: "main"
+        repoId: "rhdh-tests"
+        title: "This is a test Pull Request"
+        project: "rhdh-tests"
+        supportsIterations: false
+
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: "dev.azure.com?owner=rhdh-tests&repo=rhdh-tests&organization=wsiqueir&version=main"
+        catalogInfoPath: "/catalog-info.yaml"
+
+  output:
+    links:
+      - title: Repository
+        url: "dev.azure.com?owner=rhdh-tests&repo=rhdh-tests&organization=wsiqueir"
+      - title: Open in catalog
+        icon: catalog
+        entityRef: ${{ steps.register.output.entityRef }}
