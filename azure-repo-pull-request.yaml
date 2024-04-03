@@ -13,6 +13,37 @@ spec:
       required:        
         - owner
       properties:
+        organization:
+          title: Organization
+          type: string
+          description: Organization Name
+          default: "rhdh-tests"
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+        repoId:
+          title: Repository Id
+          type: string
+          default: "rhdh-tests"
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+        sourceBranch:
+          title: Source Branch
+          type: string
+          default: "test"          
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+        targetBranch:
+          title: Target Branch
+          type: string
+          default: "main"          
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+        project:
+          title: Project
+          type: string
+          default: "rhdh-tests"          
+          ui:field: EntityNamePicker
+          ui:autofocus: true
         owner:
           title: Owner
           type: string
@@ -27,12 +58,12 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
-        organization: "rhdh-tests"
-        sourceBranch: "test"
-        targetBranch: "main"
-        repoId: "rhdh-tests"
+        organization:  ${{ parameters.organization }}
+        sourceBranch: ${{ parameters.sourceBranch }}
+        targetBranch: ${{ parameters.targetBranch }}
+        repoId: ${{ parameters.repoId }}
         title: "This is a test Pull Request"
-        project: "rhdh-tests"
+        project: ${{ parameters.project }}
         supportsIterations: false
 
     - id: register
