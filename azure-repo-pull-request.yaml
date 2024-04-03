@@ -27,6 +27,7 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
+        organization: "rhdh-tests"
         sourceBranch: "test"
         targetBranch: "main"
         repoId: "rhdh-tests"
