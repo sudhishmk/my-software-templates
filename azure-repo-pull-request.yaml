@@ -17,7 +17,7 @@ spec:
           title: Organization
           type: string
           description: Organization Name
-          default: "rhdh-tests"
+          default: "wsiqueir"
           ui:field: EntityNamePicker
           ui:autofocus: true
         repoId:
@@ -66,17 +66,9 @@ spec:
         project: ${{ parameters.project }}
         supportsIterations: false
 
-    - id: register
-      name: Register
-      action: catalog:register
-      input:
-        repoContentsUrl: "dev.azure.com?owner=rhdh-tests&repo=rhdh-tests&organization=wsiqueir&version=main"
-        catalogInfoPath: "/catalog-info.yaml"
 
   output:
     links:
-      - title: Repository
-        url: "dev.azure.com?owner=rhdh-tests&repo=rhdh-tests&organization=wsiqueir"
-      - title: Open in catalog
-        icon: catalog
-        entityRef: ${{ steps.register.output.entityRef }}
+      - title: PR Link
+        url: "https://dev.azure.com/${{ parameters.organization }}/${{ parameters.repoId }}/_git/rhdh-tests/pullrequest/${{ steps.pullRequestAzureRepo.output.pullRequestId }}"
+
