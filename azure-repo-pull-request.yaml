@@ -5,7 +5,7 @@ metadata:
   title: Azure Repository Test - PR
   description: Creates a PR as test
 spec:
-  owner: parfuemerie-douglas
+  owner: wsiqueir
   type: service
 
   parameters:
