@@ -60,11 +60,11 @@ spec:
       name: Create a Pull Request to Azure Repo
       action: azure:repo:pr
       input:
-        sourceBranch: test
+        sourceBranch: "test"
         targetBranch: "main"
-        repoId: rhdh-tests
+        repoId: "rhdh-tests"
         title: ${{ parameters.name }}
-        project: rhdh-tests
+        project: "rhdh-tests"
         supportsIterations: false
 
     - id: register
