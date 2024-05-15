@@ -14,8 +14,7 @@ spec:
       input:
         method: 'GET'
         path: '/proxy/quay/api/'
-  output:    
-
+  output:
     - title: Response Information
       content: |
         **      getResponse: '{{ steps.backstage_request.output.body }}'
