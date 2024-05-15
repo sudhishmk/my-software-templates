@@ -15,10 +15,12 @@ spec:
         method: 'GET'
         path: '/proxy/quay/api/'
   output:
-   - title: body
-     content: '{{ steps.backstage_request.output.body }}'
-   - title: code
-     content: '{{ steps.backstage_request.output.code }}'
-   - title: headers
-     content: '{{ steps.backstage_request.output.headers }}'
+    text:
+     - title: body
+       content: |
+         **Code**  {{ steps.backstage_request.output.code }}
+         **Headers** {{ steps.backstage_request.output.headers }}
+         **Body** {{ steps.backstage_request.output.body }}
+
+
 
