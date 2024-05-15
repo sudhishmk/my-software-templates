@@ -13,9 +13,7 @@ spec:
       input:
         method: 'GET'
         path: '/proxy/quay/api/'
-
-
-  output:
-    getResponse: '{{ steps.backstage_request.output.body }}'
-    getCode: '{{ steps.backstage_request.output.code }}'
-    getHeaders: '{{ steps.backstage_request.output.headers }}' 
+      output:
+        getResponse: '{{ steps.backstage_request.output.body }}'
+        getCode: '{{ steps.backstage_request.output.code }}'
+        getHeaders: '{{ steps.backstage_request.output.headers }}' 
