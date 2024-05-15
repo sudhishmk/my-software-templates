@@ -18,9 +18,9 @@ spec:
     text:
      - title: body
        content: |
-         **Code**  {{ steps.backstage_request.output.code }}
-         **Headers** {{ steps.backstage_request.output.headers }}
-         **Body** {{ steps.backstage_request.output.body }}
+         **Code**  ${{ steps.backstage_request.output.code }}
+         **Headers** ${{ steps.backstage_request.output.headers }}
+         **Body** ${{ steps.backstage_request.output.body }}
 
 
 
