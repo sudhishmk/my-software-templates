@@ -13,14 +13,14 @@ spec:
         - repoName
         - owner
         properties:
-        owner:
-          title: Owner
-          type: string
-          default: jesuinoMaster
-        repoName:
-          title: Repo Name
-          type: string
-          default: test-template       
+          owner:
+            title: Owner
+            type: string
+            default: jesuinoMaster
+          repoName:
+            title: Repo Name
+            type: string
+            default: test-template       
   steps:
     - id: fetch-template
       name: Fetch a sample template
