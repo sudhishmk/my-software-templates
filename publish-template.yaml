@@ -24,7 +24,7 @@ spec:
       name: Fetch a sample template
       action: fetch:template
       input:
-        url: ./template/test
+        url: ./templates/test
     - id: publish
       name: Publishing the template to gitlab
       action: publish:gitlab
