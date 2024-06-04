@@ -1,0 +1,42 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: publish template
+  title: Simple Publish Template test
+  tags: [test_template]
+spec:
+  owner: jesuinoMaster
+  type: service
+  parameters:
+    - title: 
+      required:
+        - repoName
+        - owner
+        properties:
+        owner:
+          title: Owner
+          type: string
+          default: jesuinoMaster
+        repoName:
+          title: Repo Name
+          type: string
+          default: test-template       
+  steps:
+    - id: fetch-template
+      name: Fetch a sample template
+      action: fetch:template
+      input:
+        url: ./templates/test
+    - id: publish
+      name: Publishing the template to gitlab
+      action: publish:gitlab
+      input:
+        allowedHosts: ["gitlab.com"]
+        description: Testing publish template
+        repoUrl: gitlab.com?owner=${{ parameters.owner }}&repo=${{ parameters.repoName }}
+
+  output:
+    links:
+      - title: Repo URL
+        url: ${{ steps.publish.output.remoteUrl }}
+        text: "Repo URL"
