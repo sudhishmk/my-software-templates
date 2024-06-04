@@ -9,9 +9,7 @@ spec:
   type: service
   parameters:
     - title: Repo Data
-      required:
-        - repoName
-        - owner
+      required: [ owner, repoName ]
       properties:
         owner:
           title: Owner
