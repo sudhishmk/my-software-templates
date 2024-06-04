@@ -1,7 +1,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: publish template
+  name: test_publish_template
   title: Simple Publish Template test
   tags: [test_template]
 spec:
