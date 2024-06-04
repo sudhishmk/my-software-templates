@@ -3,7 +3,7 @@ kind: Template
 metadata:
   name: test_publish_template
   title: Simple Publish Template test
-  tags: [test_template]
+  tags: [template,rhdh,gitlab]
 spec:
   owner: jesuinoMaster
   type: service
