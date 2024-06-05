@@ -22,7 +22,7 @@ spec:
   steps:
     - id: fetch-file
       name: Fetch a simple file
-      action: fetch:plain
+      action: fetch:plain:file
       input:
         url: https://github.com/janus-idp/backstage-showcase/blob/main/README.md
         targetPath: ./README.md
