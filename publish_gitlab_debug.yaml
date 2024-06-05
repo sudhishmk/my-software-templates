@@ -1,7 +1,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: test_publish_content
+  name: test_publish_content_debug
   title: Simple Publish Content to Gitlab
   tags: [rhdh,gitlab]
 spec:
@@ -24,7 +24,7 @@ spec:
       name: Fetch a simple file
       action: fetch:plain:file
       input:
-        url: https://raw.githubusercontent.com/janus-idp/backstage-showcase/main/README.md
+        url: https://github.com/janus-idp/backstage-showcase/blob/main/README.md
         targetPath: ./README.md
     - id: debug
       action: debug:log
