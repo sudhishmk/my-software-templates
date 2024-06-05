@@ -25,6 +25,7 @@ spec:
       action: fetch:plain
       input:
         url: https://github.com/janus-idp/backstage-showcase/blob/main/README.md
+        targetPath: ./README.md
     - id: publish
       name: Publishing the content to gitlab
       action: publish:gitlab
