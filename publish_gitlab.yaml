@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: test_publish_content
-  title: Simple Publish Content to Gitlab
+  name: test_publish_content_sudhish
+  title: Simple Publish Content to Gitlab Test
   tags: [rhdh,gitlab]
 spec:
   owner: jesuinoMaster
