@@ -14,7 +14,7 @@ spec:
         owner:
           title: Owner
           type: string
-          default: jesuinoMaster
+          default: sudhishmk
         repoName:
           title: Repo Name
           type: string
@@ -24,7 +24,7 @@ spec:
       name: Fetch a simple file
       action: fetch:plain:file
       input:
-        url: https://raw.githubusercontent.com/janus-idp/backstage-showcase/main/README.md
+        url: https://github.com/sudhishmk/rhdhcatlogexample/blob/main/README.md
         targetPath: ./README.md
     - id: publish
       name: Publishing the content to gitlab
