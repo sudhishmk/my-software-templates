@@ -5,7 +5,7 @@ metadata:
   title: Simple Publish Content to Gitlab Test
   tags: [rhdh,gitlab]
 spec:
-  owner: jesuinoMaster
+  owner: sudhishmk
   type: service
   parameters:
     - title: Repo Data
