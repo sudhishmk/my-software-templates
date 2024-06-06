@@ -5,7 +5,7 @@ metadata:
   title: Simple Publish Content to Gitlab
   tags: [rhdh,gitlab]
 spec:
-  owner: jesuinoMaster
+  owner: sudhishmk
   type: service
   parameters:
     - title: Repo Data
@@ -14,7 +14,7 @@ spec:
         owner:
           title: Owner
           type: string
-          default: jesuinoMaster
+          default: sudhishmk
         repoName:
           title: Repo Name
           type: string
@@ -24,7 +24,7 @@ spec:
       name: Fetch a simple file
       action: fetch:plain:file
       input:
-        url: https://github.com/janus-idp/backstage-showcase/blob/main/README.md
+        url: https://github.com/sudhishmk/rhdhcatlogexample/blob/main/README.md
         targetPath: ./README.md
     - id: debug
       action: debug:log
